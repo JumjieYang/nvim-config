@@ -33,8 +33,6 @@ packer.startup({
     use("hrsh7th/cmp-cmdline") -- { name = 'cmdline' }
     use("onsails/lspkind-nvim")
     use("rafamadriz/friendly-snippets")
-    use("lukas-reineke/indent-blankline.nvim")
-
 
   end,
   config = {

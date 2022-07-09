@@ -7,6 +7,7 @@ end
 
 local servers = {
   sumneko_lua = require('lsp.config.lua'),
+  pyright = require('lsp.config.pyright'),
 }
 
 for name, _ in pairs(servers) do
@@ -33,4 +34,3 @@ lsp_installer.on_server_ready(function(server)
     sever:setup({})
   end
 end)
-
