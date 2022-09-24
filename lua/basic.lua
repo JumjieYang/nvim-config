@@ -1,5 +1,5 @@
 vim.g.encoding = "UTF-8"
-vim.o.fileencoding = 'utf-8'
+vim.o.fileencoding = "utf-8"
 
 vim.o.scrolloff = 8
 vim.o.sidescrolloff = 8
@@ -9,25 +9,19 @@ vim.wo.relativenumber = true
 
 vim.wo.cursorline = true
 
-vim.wo.signcolumn = 'yes'
+vim.wo.signcolumn = "yes"
 
-vim.wo.colorcolumn = '100'
+vim.wo.colorcolumn = "80"
 
 vim.o.tabstop = 2
 vim.bo.tabstop = 2
 vim.o.softtabstop = 2
-vim.o.shiftround = true
 
 vim.o.shiftwidth = 2
 vim.bo.shiftwidth = 2
 
 vim.o.expandtab = true
 vim.bo.expandtab = true
-
-vim.o.autoindent = true
-vim.bo.autoindent = true
-
-vim.o.smartindent = true
 
 vim.o.ignorecase = true
 vim.o.smartcase = true
@@ -45,11 +39,11 @@ vim.bo.autoread = true
 vim.o.wrap = false
 vim.wo.wrap = false
 
-vim.o.whichwrap = 'b,s,<,>,[,],h,l'
+vim.o.whichwrap = "b,s,<,>,[,],h,l"
 
 vim.o.hidden = true
 
-vim.o.mouse = 'a'
+vim.o.mouse = "a"
 
 vim.o.backup = false
 vim.o.writebackup = false
@@ -67,12 +61,8 @@ vim.g.completeopt = "menu,menuone,noselect,noinsert"
 vim.o.termguicolors = true
 vim.opt.termguicolors = true
 
-vim.o.list = true
-vim.o.listchars = "space:·"
-
 vim.o.wildmenu = true
 
-vim.o.shortmess = vim.o.shortmess .. 'c'
 vim.o.pumheight = 10
 
 vim.o.showtabline = 2

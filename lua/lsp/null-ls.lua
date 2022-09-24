@@ -6,10 +6,9 @@ if not status then
 end
 
 local formatting = null_ls.builtins.formatting
-local hover = null_ls.builtins.hover
 null_ls.setup({
 	debug = false,
-  timeout_ms = 5000,
+
 	sources = {
 		formatting.shfmt,
 		formatting.stylua,
@@ -26,6 +25,7 @@ null_ls.setup({
 				"cuda",
 			},
 		}),
+
 		formatting.prettier.with({
 			filetypes = {
 				"javascript",
@@ -43,12 +43,5 @@ null_ls.setup({
 			},
 			prefer_local = "node_modules/.bin",
 		}),
-		hover.dictionary,
 	},
-
-	on_attach = function(client)
-		if client.server_capabilities.documentFormattingProvider then
-			vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.format({async: true})")
-		end
-	end,
 })

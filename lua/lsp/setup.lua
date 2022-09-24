@@ -13,7 +13,9 @@ if not status then
 end
 
 mason.setup()
-
+local on_attach = function(client, bufnr)
+  client.server_capabilities.documentFormattingProvider = false
+end
 mason_lspconfig.setup({
 	ensure_installed = {
 		"sumneko_lua",
@@ -32,6 +34,8 @@ mason_lspconfig.setup({
 
 mason_lspconfig.setup_handlers({
 	function(server_name)
-		require("lspconfig")[server_name].setup({})
+		require("lspconfig")[server_name].setup({
+  on_attach = on_attach
+    })
 	end,
 })
